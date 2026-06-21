@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Untuk Udayana 🌸</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Baloo+2:wght@500;600;700&family=Quicksand:wght@400;500;600&display=swap');
+
+    :root {
+      --cream: #FFF6EC;
+      --blush: #FFD9CB;
+      --coral: #FF8A75;
+      --magenta: #C2487D;
+      --gold: #E8A23D;
+      --plum: #4A2E3D;
+      --paper: #FFFDF9;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: var(--cream);
+      color: var(--plum);
+      font-family: 'Quicksand', sans-serif;
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    h1,
+    h2 {
+      font-family: 'Caveat', cursive;
+      font-weight: 700;
+    }
+
+    .eyebrow,
+    .label,
+    button {
+      font-family: 'Baloo 2', sans-serif;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    /* ---------- floating frangipani flowers ---------- */
+    .bloom {
+      position: absolute;
+      width: 54px;
+      height: 54px;
+      opacity: 0.85;
+      animation: drift 9s ease-in-out infinite;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .bloom svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .b1 {
+      top: 8%;
+      left: 6%;
+      animation-delay: 0s;
+    }
+
+    .b2 {
+      top: 18%;
+      right: 8%;
+      width: 38px;
+      height: 38px;
+      animation-delay: 1.4s;
+    }
+
+    .b3 {
+      top: 55%;
+      left: 3%;
+      width: 34px;
+      height: 34px;
+      animation-delay: 2.6s;
+    }
+
+    .b4 {
+      top: 65%;
+      right: 5%;
+      animation-delay: 0.8s;
+    }
+
+    .b5 {
+      top: 85%;
+      left: 12%;
+      width: 30px;
+      height: 30px;
+      animation-delay: 3.5s;
+    }
+
+    @keyframes drift {
+
+      0%,
+      100% {
+        transform: translateY(0) rotate(0deg);
+      }
+
+      50% {
+        transform: translateY(-18px) rotate(8deg);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .bloom {
+        animation: none;
+      }
+    }
+
+    /* ---------- hero ---------- */
+    .hero {
+      position: relative;
+      min-height: 100svh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem 1.2rem;
+      background: radial-gradient(circle at 30% 20%, #FFE7D8 0%, var(--cream) 55%);
+    }
+
+    .eyebrow {
+      color: var(--magenta);
+      font-size: 0.95rem;
+      letter-spacing: 0.04em;
+      margin-bottom: 0.6rem;
+    }
+
+    .hero-title {
+      font-size: clamp(3.2rem, 10vw, 6.5rem);
+      color: var(--magenta);
+      text-shadow: 2px 2px 0 var(--blush);
+      line-height: 1;
+    }
+
+    .hero-sub {
+      margin-top: 1rem;
+      max-width: 34ch;
+      font-size: 1.05rem;
+      color: var(--plum);
+    }
+
+    .scroll-cue {
+      margin-top: 3rem;
+      font-size: 0.85rem;
+      color: var(--magenta);
+      opacity: 0.7;
+      animation: bob 2s ease-in-out infinite;
+    }
+
+    @keyframes bob {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(6px);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .scroll-cue {
+        animation: none;
+      }
+    }
+
+    /* ---------- shared section style ---------- */
+    section {
+      position: relative;
+      padding: 4.5rem 1.4rem;
+      max-width: 920px;
+      margin: 0 auto;
+    }
+
+    section h2 {
+      text-align: center;
+      font-size: clamp(2rem, 6vw, 2.8rem);
+      color: var(--magenta);
+      margin-bottom: 2.4rem;
+    }
+
+    /* ---------- reasons cards (scrapbook) ---------- */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2.2rem 1.6rem;
+    }
+
+    .card {
+      background: var(--paper);
+      border-radius: 4px;
+      padding: 1.6rem 1.3rem 1.4rem;
+      box-shadow: 0 10px 24px -12px rgba(74, 46, 61, 0.35);
+      position: relative;
+      font-size: 1rem;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      width: 64px;
+      height: 24px;
+      background: rgba(255, 138, 117, 0.55);
+      transform: translateX(-50%) rotate(-3deg);
+      border-radius: 2px;
+    }
+
+    .card:nth-child(odd) {
+      transform: rotate(-2.5deg);
+    }
+
+    .card:nth-child(even) {
+      transform: rotate(2deg);
+    }
+
+    .card:nth-child(3n) {
+      transform: rotate(-1deg);
+    }
+
+    .card span {
+      display: block;
+      font-family: 'Baloo 2', sans-serif;
+      color: var(--coral);
+      font-size: 0.78rem;
+      letter-spacing: 0.06em;
+      margin-bottom: 0.5rem;
+    }
+
+    /* ---------- counter ---------- */
+    .counter-section {
+      text-align: center;
+    }
+
+    .counter-box {
+      background: var(--blush);
+      border-radius: 18px;
+      padding: 2.2rem 1.6rem;
+      max-width: 420px;
+      margin: 0 auto;
+    }
+
+    .counter-box label {
+      display: block;
+      font-family: 'Baloo 2', sans-serif;
+      font-size: 0.9rem;
+      margin-bottom: 0.7rem;
+      color: var(--plum);
+    }
+
+    input[type="date"] {
+      font-family: 'Quicksand', sans-serif;
+      font-size: 1rem;
+      padding: 0.55rem 0.8rem;
+      border-radius: 10px;
+      border: 2px solid var(--coral);
+      background: var(--paper);
+      color: var(--plum);
+    }
+
+    #counterResult {
+      margin-top: 1.4rem;
+      font-family: 'Caveat', cursive;
+      font-size: 2.2rem;
+      color: var(--magenta);
+      min-height: 2.6rem;
+    }
+
+    /* ---------- note generator ---------- */
+    .notes-section {
+      text-align: center;
+    }
+
+    button {
+      cursor: pointer;
+      border: none;
+      background: var(--coral);
+      color: var(--paper);
+      font-size: 1rem;
+      font-weight: 600;
+      padding: 0.85rem 1.8rem;
+      border-radius: 30px;
+      box-shadow: 0 8px 18px -8px rgba(194, 72, 125, 0.6);
+      transition: transform 0.15s ease;
+    }
+
+    button:hover {
+      transform: translateY(-2px) scale(1.02);
+    }
+
+    button:focus-visible {
+      outline: 3px solid var(--magenta);
+      outline-offset: 3px;
+    }
+
+    #noteOutput,
+    #quizResult {
+      margin-top: 1.6rem;
+      font-family: 'Caveat', cursive;
+      font-size: 1.7rem;
+      color: var(--plum);
+      max-width: 36ch;
+      margin-left: auto;
+      margin-right: auto;
+      min-height: 2.4rem;
+    }
+
+    .quiz-section {
+      text-align: center;
+    }
+
+    footer {
+      text-align: center;
+      padding: 3.5rem 1.4rem 4rem;
+      font-family: 'Caveat', cursive;
+      font-size: 1.6rem;
+      color: var(--magenta);
+    }
+
+    footer .small {
+      display: block;
+      font-family: 'Quicksand', sans-serif;
+      font-size: 0.85rem;
+      color: var(--plum);
+      opacity: 0.7;
+      margin-top: 0.5rem;
+    }
+
+    @media (max-width:480px) {
+      section {
+        padding: 3.2rem 1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="bloom b1"><svg viewBox="0 0 100 100">
+      <ellipse cx="50" cy="22" rx="14" ry="24" fill="#FFFDF9" transform="rotate(0 50 50)" />
+      <ellipse cx="50" cy="22" rx="14" ry="24" fill="#FFFDF9" transform="rotate(72 50 50)" />
+      <ellipse cx="50" cy="22" rx="14" ry="24" fill="#FFFDF9" transform="rotate(144 50 50)" />
+      <ellipse cx="50" cy="22" rx="14" ry="24" fill="#FFFDF9" transform="rotate(216 50 50)" />
+      <ellipse cx="50" cy="22" rx="14" ry="24" fill="#FFFDF9" transform="rotate(288 50 50)" />
+      <circle cx="50" cy="50" r="9" fill="#E8A23D" />
+    </svg></div>
+
+  <div class="bloom b2"><svg viewBox="0 0 100 100">
+      <ellipse cx="50" cy="22" rx="14" ry="24" fill="#FFD9CB" transform="rotate(0 50 50)" />
+      <ellipse cx="50" cy="22" rx="14" ry="24" fill="#FFD9CB" transform="rotate(72 50 50)" />
+      <ellipse cx="50" cy="22" rx="14" ry="24" fill="#FFD9CB" transform="rotate(144 50 50)" />
+      <ellipse cx="50" cy="22" rx="14" ry="24" fill="#FFD9CB" transform="rotate(216 50 50)" />
+      <ellipse cx="50" cy="22" rx="14" ry="24" fill="#FFD9CB" transform="rotate(288 50 50)" />
+      <circle cx="50" cy="50" r="9" fill="#E8A23D" />
+    </svg></div>
+
+  <div class="bloom b3"><svg viewBox="0 0 100 100">
+      <ellipse cx="50" cy="22" rx="14" ry="24" fill="#FFFDF9" transform="rotate(0 50 50)" />
+      <ellipse cx="50" cy="22" rx="14" ry="24" fill="#FFFDF9" transform="rotate(72 50 50)" />
+      <ellipse cx="50" cy="22" rx="14" ry="24" fill="#FFFDF9" transform="rotate(144 50 50)" />
+      <ellipse cx="50" cy="22" rx="14" ry="24" fill="#FFFDF9" transform="rotate(216 50 50)" />
+      <ellipse cx="50" cy="22" rx="14" ry="24" fill="#FFFDF9" transform="rotate(288 50 50)" />
+      <circle cx="50" cy="50" r="9" fill="#E8A23D" />
+    </svg></div>
+
+  <div class="bloom b4"><svg viewBox="0 0 100 100">
+      <ellipse cx="50" cy="22" rx="14" ry="24" fill="#FFD9CB" transform="rotate(0 50 50)" />
+      <ellipse cx="50" cy="22" rx="14" ry="24" fill="#FFD9CB" transform="rotate(72 50 50)" />
+      <ellipse cx="50" cy="22" rx="14" ry="24" fill="#FFD9CB" transform="rotate(144 50 50)" />
+      <ellipse cx="50" cy="22" rx="14" ry="24" fill="#FFD9CB" transform="rotate(216 50 50)" />
+      <ellipse cx="50" cy="22" rx="14" ry="24" fill="#FFD9CB" transform="rotate(288 50 50)" />
+      <circle cx="50" cy="50" r="9" fill="#E8A23D" />
+    </svg></div>
+
+  <div class="bloom b5"><svg viewBox="0 0 100 100">
+      <ellipse cx="50" cy="22" rx="14" ry="24" fill="#FFFDF9" transform="rotate(0 50 50)" />
+      <ellipse cx="50" cy="22" rx="14" ry="24" fill="#FFFDF9" transform="rotate(72 50 50)" />
+      <ellipse cx="50" cy="22" rx="14" ry="24" fill="#FFFDF9" transform="rotate(144 50 50)" />
+      <ellipse cx="50" cy="22" rx="14" ry="24" fill="#FFFDF9" transform="rotate(216 50 50)" />
+      <ellipse cx="50" cy="22" rx="14" ry="24" fill="#FFFDF9" transform="rotate(288 50 50)" />
+      <circle cx="50" cy="50" r="9" fill="#E8A23D" />
+    </svg></div>
+
+  <header class="hero">
+    <p class="eyebrow">sebuah halaman kecil, untuk orang yang gedean tempatnya di hati</p>
+    <h1 class="hero-title">Untuk Udayana</h1>
+    <p class="hero-sub">Haiii bebe,di sini mimi mau menyampaikan kenapa mimi sayangg banget sama tuda. Gulir pelan-pelan ya, banyak kelucuan nungguin di bawah.</p>
+    <p class="scroll-cue">↓ gulir dulu, baru baper</p>
+  </header>
+
+  <section class="reasons">
+    <h2>beberapa dari banyak alasan</h2>
+    <div class="cards-grid">
+      <div class="card"><span>ALASAN 01</span>Karena senyum kamu itu muanisss xx.</div>
+      <div class="card"><span>ALASAN 02</span>Karena kamu sabar dengerin aku yapping hal nggak penting tiap hari.</div>
+      <div class="card"><span>ALASAN 03</span>Karena caramu peduli itu nggak pernah pake drama, cuma tulus aja gitu.</div>
+      <div class="card"><span>ALASAN 04</span>Karena kalau lagi bareng kamu, waktu kayak lupa caranya jalan pelan-pelan.</div>
+      <div class="card"><span>ALASAN 05</span>Karena kamu inget hal-hal kecil yang bahkan aku sendiri udah lupa.</div>
+      <div class="card"><span>ALASAN 06</span>Karena kamu brokoliii, dan jujur aja itu udah cukup jadi satu alasan penuh.</div>
+    </div>
+  </section>
+
+  <section class="counter-section">
+    <h2>udah berapa lama sih kita...</h2>
+    <div class="counter-box">
+      <label for="startDate">masukin tanggal pertama x kita deket,awas aja lupa!!:</label>
+      <input type="date" id="startDate">
+      <div id="counterResult">pilih tanggalnya dulu ya 🌸</div>
+    </div>
+  </section>
+
+  <section class="notes-section">
+    <h2>generator pesan random buat Brokoli imut </h2>
+    <button id="noteBtn">klik aku 🌸</button>
+    <p id="noteOutput"></p>
+  </section>
+
+  <section class="quiz-section">
+    <h2>tes kecocokan resmi (100% akurat, dijamin bias)</h2>
+    <button id="quizBtn">mulai tes</button>
+    <div id="quizResult"></div>
+  </section>
+
+  <footer>
+    dibuat dengan banyak sayang, khusus buat bebee 🌸
+    <span class="small">refresh halaman ini kapan pun butuh diingetin.</span>
+  </footer>
+
+  <script>
+    // ---- love day counter ----
+    const dateInput = document.getElementById('startDate');
+    const counterResult = document.getElementById('counterResult');
+    dateInput.addEventListener('change', () => {
+      if (!dateInput.value) {
+        counterResult.textContent = "pilih tanggalnya dulu ya 🌸";
+        return;
+      }
+      const start = new Date(dateInput.value);
+      const today = new Date();
+      const diffTime = today - start;
+      if (diffTime < 0) {
+        counterResult.textContent = "lho, itu kan belum kejadian 👀";
+        return;
+      }
+      const days = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+      counterResult.textContent = days + " hari bersama Udayana 💕";
+    });
+    // ---- random love note generator ----
+    const notes = [
+      "Hari ini resmi nambah satu lagi alasan aku sayang Udayana.",
+      "Kalau kangen itu olahraga, aku udah jadi atlet nasional gara-gara kamu.",
+      "Reminder: senyum kamu itu obat mood jelek paling manjur sedunia.",
+      "Surat cinta paling jujur: aku sayang kamu, titik, nggak pake tapi.",
+      "Kalau ada lomba 'siapa yang paling bikin baper', juaranya kamu, terus, selalu.",
+      "Udayana itu definisi rumah versi aku.",
+      "Makasih udah jadi alasan aku semangat buka notif HP tiap hari.",
+      "Kalau dunia kiamat besok, aku tetep mau abisin hari terakhir bareng kamu.",
+      "Kamu tuh bukti kalau hal baik beneran ada, dan aku kebagian satu.",
+      "Sayang kamu segini, dan ini baru update versi hari ini."
+    ];
+    const noteBtn = document.getElementById('noteBtn');
+    const noteOutput = document.getElementById('noteOutput');
+    noteBtn.addEventListener('click', () => {
+      const pick = notes[Math.floor(Math.random() * notes.length)];
+      noteOutput.textContent = pick;
+    });
+    // ---- silly compatibility quiz ----
+    const quizBtn = document.getElementById('quizBtn');
+    const quizResult = document.getElementById('quizResult');
+    const quizLines = [
+      "Hasil: 100% cocok. Sistem nolak ngitung angka lain.",
+      "Hasil: 100%. Sudah dicoba diulang 3 kali, tetep sama.",
+      "Hasil: 100%. Kalkulator cinta kami memang agak bias, tapi yakin kok.",
+    ];
+    quizBtn.addEventListener('click', () => {
+      const pick = quizLines[Math.floor(Math.random() * quizLines.length)];
+      quizResult.textContent = pick;
+    });
+  </script>
+
+</body>
+
+</html>
